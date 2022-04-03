@@ -6,8 +6,9 @@ function solution(digits) {
     let result = 0
     for (let i = 0; i < (digits.length - 4); i++) {
         let a = digits.slice(i, i + 5)
-            if (+a>result) result = +a
+        if (+a > result) result = +a
     }
+
     return result
 }
 
