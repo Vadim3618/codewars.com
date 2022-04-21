@@ -7,15 +7,19 @@
 // array[4] ---> represents $50 bills
 // array[5] ---> represents $100 bills
 // In the case below, we broke up $365 into 1 $5 bill, 1 $10 bill, 1 $50 bill, and 3 $100 bills.
-// const arr = [100, 50, 20, 10, 5, 1]
 
-const giveChange = (amount) => (
-  arr.map(el => {
-      let result = Math.trunc(amount / el)
-      amount %= el
-      return result
-  }).reverse()
-)
+const arr = [100, 50, 20, 10, 5, 1]
+
+const giveChange = (amount) => {
+    const arr = [100, 50, 20, 10, 5, 1]
+    return (
+      arr.map(el => {
+          let result = Math.trunc(amount / el)
+          amount %= el
+          return result
+      }).reverse()
+    )
+}
 
 // head-on solution
 // function giveChange(amount) {
